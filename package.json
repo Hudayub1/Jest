@@ -1,0 +1,22 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000J\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000\r\u0000 \u0000I\u0000m\u0000 \u0000g\u0000o\u0000i\u0000n\u0000g\u0000 \u0000t\u0000o\u0000 \u0000t\u0000e\u0000s\u0000t\u0000 \u0000j\u0000e\u0000s\u0000t\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hudayub1/Jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hudayub1/Jest/issues"
+  },
+  "homepage": "https://github.com/Hudayub1/Jest#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
