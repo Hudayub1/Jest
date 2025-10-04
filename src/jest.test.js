@@ -13,8 +13,7 @@ function revStr(str) {
     return str.split("").reverse().join("")
 }
 
-class Calculator {
-    
+class Calculator { 
     static sum(n1, n2) {
         return n1 + n2
     }
@@ -29,6 +28,50 @@ class Calculator {
 
     static divide(n1, n2) {
         return n1 / n2
+    }
+}
+
+class AnalyzeArr {
+    constructor(arr) {
+        this.arr = arr;
+    }
+    average(arr) {
+        const sum = this.arr.reduce((acc, curr) => {
+            return acc + curr;
+        });
+        const length = this.arr.length
+
+        return sum / length;
+    }
+
+    min(arr) {
+        return Math.min(...this.arr)
+    }
+
+    max(arr) {
+        return Math.max(...this.arr)
+    }
+
+    length(arr) {
+        return this.arr.length
+    }
+
+    AnalyzeArrWrapper(arr) {
+    const analyzer = new AnalyzeArr();
+        return {
+            average: analyzer.average(arr),
+            min: analyzer.min(arr),
+            max: analyzer.max(arr),
+            length: analyzer.length(arr),
+        };
+    }
+    toObject() {
+        return {
+            average: this.average(),
+            min: this.min(),
+            max: this.max(),
+            length: this.length()
+        };
     }
 }
 
@@ -60,7 +103,7 @@ test('Calculator', () => {
 
 // 5
 test('analyzeArr', () => {
-    const object = analyzeArr([1,8,3,4,2,6]);
+    const object = new AnalyzeArr([1,8,3,4,2,6]).toObject();
 
     expect(object).toEqual({
         average: 4,
